@@ -1,7 +1,15 @@
 import '../styles/globals.css'
+import Layout from '../components/layouts'
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <ToastContainer limit={1}/>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 export default MyApp
